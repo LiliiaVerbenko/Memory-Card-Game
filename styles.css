@@ -37,8 +37,8 @@ body {
 }
 
 .cards-list {
-    height: 600px;
-    width: 600px;
+    height: 400px;
+    width: 400px;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -67,11 +67,11 @@ body {
 }
 
 .memory-card .front img {
-    width: 19px;
+    width: 40px;
 }
 
 .memory-card .back img {
-    max-width: 45px;
+    max-width: 80px;
 }
 
 .memory-card .back {
@@ -93,11 +93,11 @@ body {
     }
 
     .memory-card .front img {
-        width: 17px;
+        width: 35px;
     }
 
     .memory-card .back img {
-        max-width: 40px;
+        max-width: 60px;
     }
 }
 
