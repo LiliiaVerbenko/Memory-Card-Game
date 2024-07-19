@@ -1,6 +1,6 @@
 # Memory-Card-Game
 
-This is a simple memory card game implemented using HTML, CSS, and JavaScript. The game involves matching pairs of cards with identical images. When all pairs are matched, a fireworks display is triggered to celebrate the win.
+This is a simple memory card game implemented using HTML, CSS, and JavaScript. The game involves matching pairs of cards with identical images.
 
 ## Features
 
