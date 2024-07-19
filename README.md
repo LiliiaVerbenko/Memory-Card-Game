@@ -1,6 +1,7 @@
 # Memory-Card-Game
 
-This is a simple memory card game implemented using HTML, CSS, and JavaScript. The game involves matching pairs of cards with identical images.
+This is a simple memory card game implemented using HTML, CSS, and JavaScript. 
+The game involves matching pairs of cards with identical images.
 
 ## Features
 
