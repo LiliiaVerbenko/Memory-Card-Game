@@ -2,6 +2,7 @@ const cards = document.querySelectorAll('.memory-card');
 let matched = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
+
 function flipCard({ target: clickedCard }) {
   if (cardOne !== clickedCard && !disableDeck) {
     clickedCard.classList.add('flip');
@@ -21,7 +22,8 @@ function matchCards(img1, img2) {
     if (matched == 8) {
       setTimeout(() => {
         return shuffleCard();
-      }, 1000);
+      }, 1000)
+      throwFireworks();
     }
     cardOne.removeEventListener('click', flipCard);
     cardTwo.removeEventListener('click', flipCard);
@@ -66,6 +68,27 @@ function shuffleCard() {
 
 shuffleCard();
 
+
+function throwFireworks() {
+  const container = document.createElement('div');
+  container.style.position = 'fixed';
+  container.style.top = 0;
+  container.style.left = 0;
+  container.style.width = '100%';
+  container.style.height = '100%';
+  container.style.pointerEvents = 'none';
+  document.body.appendChild(container);
+
+  const fireworks = new Fireworks(container, { });
+  fireworks.start();
+
+  setTimeout(() => {
+      fireworks.stop();
+      document.body.removeChild(container);
+  }, 5000); // Fireworks for 5 seconds
+}
+
+document.addEventListener('DOMContentLoaded', shuffleCard); 
 cards.forEach((card) => {
   card.addEventListener('click', flipCard);
 });
