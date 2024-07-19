@@ -2,6 +2,7 @@ const cards = document.querySelectorAll('.memory-card');
 let matched = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
+const totalPairs = 8;
 
 function flipCard({ target: clickedCard }) {
   if (cardOne !== clickedCard && !disableDeck) {
@@ -16,15 +17,25 @@ function flipCard({ target: clickedCard }) {
     matchCards(cardOneImg, cardTwoImg);
   }
 }
-function matchCards(img1, img2) {
+/*function matchCards(img1, img2) {
   if (img1 === img2) {
     matched++;
     if (matched == 8) {
       setTimeout(() => {
         return shuffleCard();
-      }, 1000)
+      }, 1000);
       throwFireworks();
-    }
+    }*/
+
+    function matchCards(img1, img2) {
+      if (img1 === img2) {
+          matched++;
+          if (matched === totalPairs) {
+              setTimeout(() => {
+                  throwFireworks();
+              }, 1000); 
+          }
+  
     cardOne.removeEventListener('click', flipCard);
     cardTwo.removeEventListener('click', flipCard);
     cardOne = cardTwo = '';
@@ -68,27 +79,38 @@ function shuffleCard() {
 
 shuffleCard();
 
+/*
 
 function throwFireworks() {
-  const container = document.createElement('div');
-  container.style.position = 'fixed';
-  container.style.top = 0;
-  container.style.left = 0;
-  container.style.width = '100%';
-  container.style.height = '100%';
-  container.style.pointerEvents = 'none';
-  document.body.appendChild(container);
+    const container = document.createElement('div');
+    container.style.position = 'fixed';
+    container.style.top = 0;
+    container.style.left = 0;
+    container.style.width = '100%';
+    container.style.height = '100%';
+    container.style.pointerEvents = 'none';
+    document.body.appendChild(container);
 
-  const fireworks = new Fireworks(container, { });
-  fireworks.start();
+    const fireworksOptions = {
+        maxRockets: 3,         
+        rocketSpawnInterval: 
+        numParticles: 100,      
+        explosionMinHeight: 0.2, 
+        explosionMaxHeight: 0.9, 
+        explosionChance: 0.08   
+    };
 
-  setTimeout(() => {
-      fireworks.stop();
-      document.body.removeChild(container);
-  }, 5000); // Fireworks for 5 seconds
-}
+    const fireworks = new Fireworks(container, fireworksOptions);
+    fireworks.start();
 
-document.addEventListener('DOMContentLoaded', shuffleCard); 
+    setTimeout(() => {
+        fireworks.stop();
+        document.body.removeChild(container);
+    }, 5000); 
+
+document.addEventListener('DOMContentLoaded', shuffleCard); */
+
+
 cards.forEach((card) => {
   card.addEventListener('click', flipCard);
 });
