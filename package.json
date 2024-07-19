@@ -1,0 +1,25 @@
+{
+    "name": "my-node-project",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "node index.js",
+      "test": "jest",
+      "build": "babel src -d dist"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "babel-cli": "^6.26.0",
+      "jest": "^27.2.2"
+    },
+    "images": [
+      {"id": 1, "src": "images/img1.png", "description": "Image 1"},
+      {"id": 2, "src": "images/img2.png", "description": "Image 2"},
+      {"id": 3, "src": "images/img3.png", "description": "Image 3"},
+      {"id": 4, "src": "images/img4.png", "description": "Image 4"},
+      {"id": 5, "src": "images/img5.png", "description": "Image 5"},
+      {"id": 6, "src": "images/img6.png", "description": "Image 6"},
+      {"id": 7, "src": "images/img7.png", "description": "Image 7"},
+      {"id": 8, "src": "images/img8.png", "description": "Image 8"}
+    ]
+  }
+  
