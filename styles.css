@@ -18,7 +18,7 @@ body {
 
 .container {
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 20px;
     background: #e0f2f4;
     box-shadow: 0 10px 30px rgba(14, 35, 98, 0.1);
 }
@@ -37,8 +37,8 @@ body {
 }
 
 .cards-list {
-    height: 480px;
-    width: 480px;
+    height: 460px;
+    width: 460px;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -50,8 +50,8 @@ body {
     position: relative;
     perspective: 1000px;
     transform-style: preserve-3d;
-    height: calc(100% / 4 - 20px);
-    width: calc(100% / 4 - 20px);
+    height: calc(100% / 4 - 25px);
+    width: calc(100% / 4 - 25px);
 }
 
 .memory-card .view {

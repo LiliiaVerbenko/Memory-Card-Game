@@ -2,7 +2,7 @@ const cards = document.querySelectorAll('.memory-card');
 let matched = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
-const totalPairs = 8;
+const totalPairs = 10;
 
 function flipCard({ target: clickedCard }) {
   if (cardOne !== clickedCard && !disableDeck) {
