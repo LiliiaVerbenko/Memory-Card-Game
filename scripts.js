@@ -17,15 +17,7 @@ function flipCard({ target: clickedCard }) {
     matchCards(cardOneImg, cardTwoImg);
   }
 }
-/*function matchCards(img1, img2) {
-  if (img1 === img2) {
-    matched++;
-    if (matched == 8) {
-      setTimeout(() => {
-        return shuffleCard();
-      }, 1000);
-      throwFireworks();
-    }*/
+
 
     function matchCards(img1, img2) {
       if (img1 === img2) {
@@ -105,7 +97,7 @@ function showWinningImage() {
   setTimeout(() => {
     document.body.removeChild(container);
   }, 5000);
-}
+} 
 
 cards.forEach((card) => {
   card.addEventListener('click', flipCard);
