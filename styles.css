@@ -37,8 +37,8 @@ body {
 }
 
 .cards-list {
-    height: 400px;
-    width: 400px;
+    height: 480px;
+    width: 480px;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -50,8 +50,8 @@ body {
     position: relative;
     perspective: 1000px;
     transform-style: preserve-3d;
-    height: calc(100% / 4 - 10px);
-    width: calc(100% / 4 - 10px);
+    height: calc(100% / 4 - 20px);
+    width: calc(100% / 4 - 20px);
 }
 
 .memory-card .view {
@@ -86,10 +86,10 @@ body {
     transform: rotateY(180deg);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
     .cards-list {
-        height: 350px;
-        width: 350px;
+        height: 500px;
+        width: 500px;
     }
 
     .memory-card .front img {
@@ -97,21 +97,21 @@ body {
     }
 
     .memory-card .back img {
-        max-width: 60px;
+        max-width: 70px;
     }
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 700px) {
     .cards-list {
-        height: 300px;
-        width: 300px;
+        height: 400px;
+        width: 400px;
     }
 
     .memory-card .front img {
-        width: 15px;
+        width: 25px;
     }
 
     .memory-card .back img {
-        max-width: 35px;
+        max-width: 50px;
     }
 }
