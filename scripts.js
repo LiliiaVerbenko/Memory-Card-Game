@@ -125,7 +125,7 @@ function shuffleCard() {
     const totalTime = new Date() - startTime;
     const minutes = Math.floor(totalTime / 60000);
     const seconds = Math.floor((totalTime % 60000) / 1000);
-    message.textContent = `It took you ${minutes} minutes and ${seconds} seconds to match all the cards.`;
+    message.textContent = `It took you ${minutes} minutes and ${seconds-1} seconds to match all the cards.`;
     
     const containerContent = document.createElement('div');
     containerContent.style.textAlign = 'center';

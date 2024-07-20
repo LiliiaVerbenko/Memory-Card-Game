@@ -5,15 +5,17 @@ The game involves matching pairs of cards with identical images.
 
 ## How to Play
 
+1. You have 10 pairs of cards to much
 1. Click on any card to flip it over.
 2. Try to match pairs of cards with identical images.
-3. If you match all the pairs, a congratulatory image will appear to celebrate your victory!
 
 ## Features
 
-- **Card Matching**: Flip cards to find matching pairs.
-- **Responsive Design**: The game is designed to work on various screen sizes.
-- **Congratulatory Image**: When all cards are matched, a congratulatory image will pop up in the middle of the screen.
+- Flip cards to find matching pairs
+- Timer starts when the first card is flipped
+- Timer stops when all pairs are matched
+- When all cards are matched, a congratulatory image will pop up in the middle of the screen.
+- Display a message with the time taken to match all pairs
 
 ## File Structure
 

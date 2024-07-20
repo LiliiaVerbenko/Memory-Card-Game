@@ -18,9 +18,19 @@ body {
 
 .container {
     padding: 25px;
-    border-radius: 20px;
+    border-radius: 10px;
     background: #e0f2f4;
     box-shadow: 0 10px 30px rgba(14, 35, 98, 0.1);
+    position: relative;
+}
+
+.timer {
+    position: absolute;
+    top: 8px;
+    left: 25px;
+    bottom: 20px;
+    font-size: 18px;
+    color: rgb(7, 93, 90);
 }
 
 .memory-card .front {
@@ -43,6 +53,7 @@ body {
     justify-content: space-between;
 }
 
+
 .cards-list .memory-card {
     cursor: pointer;
     list-style: none;
@@ -52,6 +63,7 @@ body {
     transform-style: preserve-3d;
     height: calc(100% / 4 - 25px);
     width: calc(100% / 4 - 25px);
+    padding: 20px;
 }
 
 .memory-card .view {
