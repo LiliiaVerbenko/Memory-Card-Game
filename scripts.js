@@ -31,9 +31,9 @@ function flipCard({ target: clickedCard }) {
       if (img1 === img2) {
           matched++;
           if (matched === totalPairs) {
-              setTimeout(() => {
-                  throwFireworks();
-              }, 1000); 
+            setTimeout(() => {
+              showWinningImage();
+            }, 1000);
           }
   
     cardOne.removeEventListener('click', flipCard);
@@ -79,38 +79,36 @@ function shuffleCard() {
 
 shuffleCard();
 
-/*
+function showWinningImage() {
+  const container = document.createElement('div');
+  container.style.position = 'fixed';
+  container.style.top = 0;
+  container.style.left = 0;
+  container.style.width = '100%';
+  container.style.height = '100%';
+  container.style.display = 'flex';
+  container.style.alignItems = 'center';
+  container.style.justifyContent = 'center';
+  container.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+  container.style.zIndex = 1000;
 
-function throwFireworks() {
-    const container = document.createElement('div');
-    container.style.position = 'fixed';
-    container.style.top = 0;
-    container.style.left = 0;
-    container.style.width = '100%';
-    container.style.height = '100%';
-    container.style.pointerEvents = 'none';
-    document.body.appendChild(container);
+  const img = document.createElement('img');
+  img.src = 'images/youWon.png';
+  img.style.maxWidth = '200px';
+  img.style.border = '5px solid white';
+  img.style.borderRadius = '10px';
+  img.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
+  
+  container.appendChild(img);
+  document.body.appendChild(container);
 
-    const fireworksOptions = {
-        maxRockets: 3,         
-        rocketSpawnInterval: 
-        numParticles: 100,      
-        explosionMinHeight: 0.2, 
-        explosionMaxHeight: 0.9, 
-        explosionChance: 0.08   
-    };
-
-    const fireworks = new Fireworks(container, fireworksOptions);
-    fireworks.start();
-
-    setTimeout(() => {
-        fireworks.stop();
-        document.body.removeChild(container);
-    }, 5000); 
-
-document.addEventListener('DOMContentLoaded', shuffleCard); */
-
+  setTimeout(() => {
+    document.body.removeChild(container);
+  }, 5000);
+}
 
 cards.forEach((card) => {
   card.addEventListener('click', flipCard);
 });
+
+document.addEventListener('DOMContentLoaded', shuffleCard);
