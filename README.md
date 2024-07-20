@@ -1,14 +1,19 @@
 # Memory-Card-Game
 
-This is a simple memory card game implemented using HTML, CSS, and JavaScript. The game involves matching pairs of cards with identical images. When all pairs are matched, a fireworks display is triggered to celebrate the win.
+This is a simple memory card game implemented using HTML, CSS, and JavaScript. 
+The game involves matching pairs of cards with identical images.
 
-![Full Image](images/fullimage.png)
+## How to Play
+
+1. Click on any card to flip it over.
+2. Try to match pairs of cards with identical images.
+3. If you match all the pairs, a congratulatory image will appear to celebrate your victory!
 
 ## Features
 
-- Randomized card shuffling
-- Flip animation for the cards
-- Match detection
+- **Card Matching**: Flip cards to find matching pairs.
+- **Responsive Design**: The game is designed to work on various screen sizes.
+- **Congratulatory Image**: When all cards are matched, a congratulatory image will pop up in the middle of the screen.
 
 ## File Structure
 
@@ -56,3 +61,5 @@ Checks if the two flipped cards match. If they do, it increments the `matched` c
 ### Adding Event Listeners to Cards
 
 Each card gets a click event listener to handle the flip logic.
+
+![Full Image](images/fullimage.png)
