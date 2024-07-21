@@ -1,5 +1,7 @@
 const cards = document.querySelectorAll('.memory-card');
 const timerElement = document.getElementById('timer');
+const resetButton = document.getElementById('resetButton');
+
 let matched = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
@@ -71,6 +73,7 @@ function shuffleCard() {
     matched = 0;
     disableDeck = false;
     cardOne = cardTwo = '';
+    resetGame();
     
     fetch('data.json')
       .then(response => {
@@ -139,6 +142,17 @@ function shuffleCard() {
         document.body.removeChild(container);
     }, 5000);
 }
+function resetGame() {
+  stopTimer();
+  timerStarted = false;
+  timerElement.textContent = '00:00';
+
+  cards.forEach(card => {
+      card.classList.remove('flip');
+      card.addEventListener('click', flipCard); 
+  })
+};
+
 
 
 //shuffleCard();
@@ -149,4 +163,7 @@ cards.forEach((card) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     shuffleCard();
+    resetButton.addEventListener('click', resetGame); 
+
 });
+

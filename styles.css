@@ -16,6 +16,13 @@ body {
     background:rgb(155, 210, 208);
 }
 
+h4 {
+    margin-bottom: 20px;
+    font-size: 36px; /* Adjusted for better visibility */
+    color: #0e2362;
+    font-family: 'Tangerine'; 
+}
+
 .container {
     padding: 25px;
     border-radius: 10px;
@@ -25,12 +32,25 @@ body {
 }
 
 .timer {
-    position: absolute;
     top: 8px;
     left: 25px;
     bottom: 20px;
     font-size: 18px;
     color: rgb(7, 93, 90);
+}
+
+#resetButton {
+    position: absolute;
+    top: 25px;
+    right: 290px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(124, 184, 182);
+    color: #292121;
+    border: black;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .memory-card .front {
@@ -63,7 +83,6 @@ body {
     transform-style: preserve-3d;
     height: calc(100% / 4 - 25px);
     width: calc(100% / 4 - 25px);
-    padding: 20px;
 }
 
 .memory-card .view {
